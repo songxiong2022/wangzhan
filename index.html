@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.7;
+        }
+        /* 导航栏 */
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 24px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+        /* 主体容器 */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            padding: 0 20px;
+        }
+        /* 文章卡片 */
+        .article-card {
+            background: #fff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+        }
+        .article-card h2 {
+            margin-bottom: 10px;
+        }
+        .article-card h2 a {
+            color:#2c3e50;
+            text-decoration:none;
+        }
+        .article-card h2 a:hover {
+            color:#3498db;
+        }
+        .meta {
+            color:#777;
+            font-size:0.9rem;
+            margin-bottom:12px;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top:12px;
+            color:#3498db;
+            text-decoration:none;
+        }
+        /* 侧边栏 */
+        .sidebar {
+            display:flex;
+            flex-direction:column;
+            gap:24px;
+        }
+        .widget {
+            background:#fff;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.08);
+        }
+        .widget h3 {
+            margin-bottom:12px;
+            padding-bottom:8px;
+            border-bottom:1px solid #eee;
+        }
+        .tag-item {
+            display:inline-block;
+            background:#eef2f7;
+            padding:4px 10px;
+            border-radius:20px;
+            margin:4px;
+            font-size:0.85rem;
+        }
+        /* 页脚 */
+        footer {
+            text-align:center;
+            padding:30px;
+            background:#2c3e50;
+            color:#fff;
+            margin-top:50px;
+        }
+        /* 移动端适配 */
+        @media(max-width:768px){
+            .container{
+                grid-template-columns:1fr;
+            }
+            .nav-container{
+                flex-direction:column;
+                gap:10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">个人博客</div>
+            <nav>
+                <a href="#home">首页</a>
+                <a href="#article">文章</a>
+                <a href="#about">关于我</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 主内容区 -->
+        <main>
+            <section id="home">
+                <div class="article-card">
+                    <h2><a href="#">STM32单片机入门学习笔记</a></h2>
+                    <div class="meta">发布时间：2026‑09‑09 | 分类：嵌入式开发</div>
+                    <p>记录STM32CubeMX配置、点灯、串口调试的学习过程，从环境搭建到第一个工程实现。</p>
+                    <a href="#" class="read-more">阅读全文 »</a>
+                </div>
+                <div class="article-card">
+                    <h2><a href="#">前端简单博客页面实现</a></h2>
+                    <div class="meta">发布时间：2026‑09‑08 | 分类：网页开发</div>
+                    <p>使用HTML+CSS写一个简易博客页面，实现响应式布局，适配手机电脑。</p>
+                    <a href="#" class="read-more">阅读全文 »</a>
+                </div>
+                <div class="article-card">
+                    <h2><a href="#">生活随笔</a></h2>
+                    <div class="meta">发布时间：2026‑09‑07 | 分类：随笔</div>
+                    <p>记录日常学习与生活的碎碎念。</p>
+                    <a href="#" class="read-more">阅读全文 »</a>
+                </div>
+            </section>
+
+            <section id="about" class="article-card">
+                <h2>关于我</h2>
+                <p>一名嵌入式爱好者，喜欢单片机开发、网页编程。这里用来记录学习笔记、技术总结与生活随笔。</p>
+            </section>
+        </main>
+
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>分类</h3>
+                <p>嵌入式开发</p>
+                <p>网页前端</p>
+                <p>生活随笔</p>
+            </div>
+            <div class="widget">
+                <h3>标签</h3>
+                <span class="tag-item">STM32</span>
+                <span class="tag-item">HTML</span>
+                <span class="tag-item">CSS</span>
+                <span class="tag-item">CubeMX</span>
+                <span class="tag-item">学习笔记</span>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>© 2026 我的个人博客 | tao宝宝</p>
+    </footer>
+
+</body>
+</html>
