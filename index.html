@@ -13,7 +13,7 @@
         }
         body {
             background-color: #f7f9fc;
-            color: #333;
+            color: #222;  /* 修改全局正文文字颜色 */
             line-height: 1.7;
         }
         /* 导航栏 */
@@ -67,21 +67,21 @@
             margin-bottom: 10px;
         }
         .article-card h2 a {
-            color:#2c3e50;
+            color:#165DFF; /* 修改文章标题颜色 */
             text-decoration:none;
         }
         .article-card h2 a:hover {
             color:#3498db;
         }
         .meta {
-            color:#777;
+            color:#606060; /* 修改发布时间分类文字颜色 */
             font-size:0.9rem;
             margin-bottom:12px;
         }
         .read-more {
             display: inline-block;
             margin-top:12px;
-            color:#3498db;
+            color:#008844; /* 修改阅读更多文字颜色 */
             text-decoration:none;
         }
         /* 侧边栏 */
@@ -104,6 +104,7 @@
         .tag-item {
             display:inline-block;
             background:#eef2f7;
+            color:#2b4162; /* 新增标签文字颜色 */
             padding:4px 10px;
             border-radius:20px;
             margin:4px;
@@ -140,7 +141,6 @@
             </nav>
         </div>
     </header>
-
     <div class="container">
         <!-- 主内容区 -->
         <main>
@@ -164,13 +164,11 @@
                     <a href="#" class="read-more">阅读全文 »</a>
                 </div>
             </section>
-
             <section id="about" class="article-card">
                 <h2>关于我</h2>
                 <p>一名嵌入式爱好者，喜欢单片机开发、网页编程。这里用来记录学习笔记、技术总结与生活随笔。</p>
             </section>
         </main>
-
         <!-- 侧边栏 -->
         <aside class="sidebar">
             <div class="widget">
@@ -189,10 +187,8 @@
             </div>
         </aside>
     </div>
-
     <footer>
         <p>© 2026 我的个人博客 | tao宝宝</p>
     </footer>
-
 </body>
 </html>
